@@ -81,10 +81,10 @@ public:
 protected:
 	static UniqueId sUniqueId;
 
-	Ogre::SceneManager* mSceneManager;
+	Ogre::SceneManager* mSceneManager = nullptr;
 
 	//Sector objects
-	Ship* mPlayerShip; ///< Usefull to test special cases
+	Ship* mPlayerShip = nullptr; ///< Usefull to test special cases
 	std::vector<StaticObject*> mStaticObjects;
 	std::vector<DynamicObject*> mDynamicObjects;
 	std::vector<Shot*> mShots;
@@ -93,20 +93,20 @@ protected:
 	std::map<RakNet::RakNetGUID, Ship*> mShips;
 
 	//The physic world
-	btDiscreteDynamicsWorld* mDynamicWorld;
+	btDiscreteDynamicsWorld* mDynamicWorld = nullptr;
 	//Physic simulation related
-	btDbvtBroadphase* mBroadphase;
-    btDefaultCollisionConfiguration* mCollisionConfiguration;
-    btCollisionDispatcher* mDispatcher;
-	btSequentialImpulseConstraintSolver* mConstraintSolver;
+	btDbvtBroadphase* mBroadphase = nullptr;
+    btDefaultCollisionConfiguration* mCollisionConfiguration = nullptr;
+    btCollisionDispatcher* mDispatcher = nullptr;
+	btSequentialImpulseConstraintSolver* mConstraintSolver = nullptr;
 
 	//Updates
 	void updateShipsSystems(float _deltaTime, SectorTick _sectorTick);
 
 	//Game tick
-	SectorTick mSectorTick;
+	SectorTick mSectorTick = 0;
 	//Update rate
-	float mSectorUpdateRate;
+	float mSectorUpdateRate = 0.f;
 
 	//Performs a rewind on server objects and resimulate
 	void reSimulateWorldFromTick(SectorTick _tick);
@@ -134,12 +134,12 @@ protected:
 	std::map<SectorTick, InputState> mPlayerInputHistory;
 	void addPlayerInputInHistory(const InputState& _inputState);
 	void getPlayerInputAtTick(SectorTick _tick, InputState& _inputState);
-	unsigned int mMaxInputRewind;
+	unsigned int mMaxInputRewind = 0;
 
 	//Debug view utils
-	BulletDebugDraw* mBulletDebugDraw;
-	bool mDisplayDebug;
-	bool mDoDisplayWorld;
+	BulletDebugDraw* mBulletDebugDraw = nullptr;
+	bool mDisplayDebug = false;
+	bool mDoDisplayWorld = true;
 };
 
 #endif //_SECTOR_H_
