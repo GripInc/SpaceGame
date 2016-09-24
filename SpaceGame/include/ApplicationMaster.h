@@ -7,7 +7,7 @@
 
 #define GAME_SETTINGS_FILE_PATH "../SpaceGameRessources/"
 
-class ApplicationMaster : public Ogre::FrameListener
+class ApplicationMaster
 {
 public:
     ApplicationMaster();
