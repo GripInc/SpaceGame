@@ -77,7 +77,7 @@ public:
 		return success;
 	}
 
-	float mLightVectorX, mLightVectorY, mLightVectorZ;
+	float mLightVectorX = 0.f, mLightVectorY = 0.f, mLightVectorZ = 0.f;
 	btAlignedObjectArray<StaticObjectSettings> mStaticObjects;
 	btAlignedObjectArray<SectorObjectSettings> mPlanetObjects;
 	btAlignedObjectArray<SectorObjectSettings> mGateObjects;

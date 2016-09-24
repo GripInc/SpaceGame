@@ -14,9 +14,7 @@ class ShipPartCollisionShape
 {
 public:
 	ShipPartCollisionShape() 
-		: mMesh(""),
-		mPrimitive(""),
-		mPosition(Ogre::Vector3::ZERO),
+		: mPosition(Ogre::Vector3::ZERO),
 		mScale(Ogre::Vector3::ZERO),
 		mOrientation(Ogre::Quaternion::IDENTITY)
 	{}

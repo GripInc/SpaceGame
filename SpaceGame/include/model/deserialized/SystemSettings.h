@@ -20,9 +20,9 @@ public:
 		return success;
 	}
 
-	unsigned int mSpace;
-	unsigned int mHitPoints;
-	unsigned int mMass;
+	unsigned int mSpace = 0U;
+	unsigned int mHitPoints = 0U;
+	unsigned int mMass = 0U;
 };
 
 #endif //_SYSTEM_SETTINGS_H_

@@ -25,17 +25,12 @@ public:
 protected:
 	///Singleton
 	static PlayerCamera* mInstance;
-	PlayerCamera() 
-		: mCameraNode(NULL),
-		mCamera(NULL),
-		mRenderWindow(NULL),
-		mSceneManager(NULL)
-	{}
+	PlayerCamera() {}
 
-	Ogre::RenderWindow* mRenderWindow;
-	Ogre::SceneManager* mSceneManager;
-	Ogre::Camera* mCamera;
-	Ogre::SceneNode* mCameraNode;
+	Ogre::RenderWindow* mRenderWindow = nullptr;
+	Ogre::SceneManager* mSceneManager = nullptr;
+	Ogre::Camera* mCamera = nullptr;
+	Ogre::SceneNode* mCameraNode = nullptr;
 };
 
 #endif //_PLAYER_CAMERA_H_

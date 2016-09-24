@@ -24,9 +24,9 @@ public:
 		return success;
 	}
 
-	float mMass;
-	float mLinearDamping;
-	float mAngularDamping;
+	float mMass = 0.f;
+	float mLinearDamping = 0.f;
+	float mAngularDamping = 0.f;
 	btVector3 mLocalInertia;
 };
 

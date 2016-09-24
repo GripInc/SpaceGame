@@ -19,7 +19,7 @@ public:
 	void createView(const ScreenSettings& _screen);
 
 protected:
-	Ogre::SceneManager* mSceneManager;
+	Ogre::SceneManager* mSceneManager = nullptr;
 };
 
 #endif //_STATION_VIEW_H_

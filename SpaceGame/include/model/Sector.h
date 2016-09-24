@@ -114,14 +114,8 @@ protected:
 	//Last sector dump tick received from server with flag for rewind or not
 	struct DoNeedRewindData
 	{
-		DoNeedRewindData()
-		{
-			mLastTickReceived = 0;
-			mDoNeedRewindFlag = false;
-		}
-
-		SectorTick mLastTickReceived;
-		bool mDoNeedRewindFlag;
+		SectorTick mLastTickReceived = 0;
+		bool mDoNeedRewindFlag = false;
 	} mDoNeedRewindData;
 
 	//Set all sector's objects to the state they were at tick

@@ -5,11 +5,7 @@
 
 namespace Ogre
 {
-	class Camera;
-	class Root;
 	class SceneManager;
-	class RenderWindow;
-	class SceneNode;
 }
 
 class SectorView
@@ -25,7 +21,7 @@ public:
 
 protected:
 	//Used for cleaning
-	Ogre::SceneManager* mSceneManager;
+	Ogre::SceneManager* mSceneManager = nullptr;
 };
 
 #endif //_SECTOR_VIEW_H_

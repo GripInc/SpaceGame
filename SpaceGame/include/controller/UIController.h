@@ -19,19 +19,19 @@ public:
 	OgreBites::ParamsPanel* getDebugPanel() { return mDebugPanel; }
 
 protected:
-	GameController* mGameController;
+	GameController* mGameController = nullptr;
 
-	OgreBites::SdkTrayManager* mTrayManager;
+	OgreBites::SdkTrayManager* mTrayManager = nullptr;
 
 	//DEBUG PANEL
-	OgreBites::ParamsPanel* mDebugPanel;
+	OgreBites::ParamsPanel* mDebugPanel = nullptr;
 
 	virtual bool keyPressed(const OIS::KeyEvent &arg);
-    virtual bool keyReleased(const OIS::KeyEvent &arg);
+	virtual bool keyReleased(const OIS::KeyEvent &arg);
 
-	virtual bool mouseMoved( const OIS::MouseEvent &arg );
-	virtual bool mousePressed( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
-	virtual bool mouseReleased( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
+	virtual bool mouseMoved(const OIS::MouseEvent &arg);
+	virtual bool mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
+	virtual bool mouseReleased(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
 
 	//virtual ~SdkTrayListener() {}
 	virtual void buttonHit(OgreBites::Button* button) {}

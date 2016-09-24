@@ -16,20 +16,11 @@ class SectorObjectSettings;
 class SectorObject
 {
 public:
-	SectorObject()
-		: mEntity(NULL),
-		mSceneNode(NULL),
-		mSceneManager(NULL),
-		mObjectSettings(NULL),
-		mIsInstantiated(false)
-	{}
+	SectorObject() {}
 
-	SectorObject(const SectorObjectSettings* _sectorObjectSettings, Ogre::SceneManager* _sceneManager) :
-		mEntity(NULL),
-		mSceneNode(NULL),
-		mSceneManager(_sceneManager),
-		mObjectSettings(_sectorObjectSettings),
-		mIsInstantiated(false)
+	SectorObject(const SectorObjectSettings* _sectorObjectSettings, Ogre::SceneManager* _sceneManager)
+		: mSceneManager(_sceneManager),
+		mObjectSettings(_sectorObjectSettings)
 	{}
 
 	~SectorObject();
@@ -46,16 +37,16 @@ public:
 
 protected:
 	//Ogre scene relatives objects
-	Ogre::Entity* mEntity;
-    Ogre::SceneNode* mSceneNode;
+	Ogre::Entity* mEntity = nullptr;
+    Ogre::SceneNode* mSceneNode = nullptr;
 	//Used for destruction
-	Ogre::SceneManager* mSceneManager;
+	Ogre::SceneManager* mSceneManager = nullptr;
 	
-	const SectorObjectSettings* mObjectSettings;
+	const SectorObjectSettings* mObjectSettings = nullptr;
 
 	std::string mName;
 
-	bool mIsInstantiated;
+	bool mIsInstantiated = false;
 
 	//Create entity from either mesh, or cube prefab
 	virtual Ogre::Entity* createEntity(const std::string& _name, const std::string& _mesh, const Ogre::Vector3& _scale, Ogre::SceneManager* _sceneManager);

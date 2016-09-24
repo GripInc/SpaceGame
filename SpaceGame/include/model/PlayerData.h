@@ -55,7 +55,7 @@ public:
 
 	std::string mPlayerId;
 	std::string mShipId;
-	long long int mMoney;
+	long long int mMoney = 0;
 	std::string mLastStation;
 	std::string mLastSector;
 

@@ -17,7 +17,7 @@ class StationController : public OgreBites::SdkTrayListener, public OIS::KeyList
 public:
 	static const std::string TARGET_SPECIAL_LAUNCH;
 
-	StationController(GameController* _gameController) 
+	StationController(GameController* _gameController)
 		: mGameController(_gameController)
 	{}
 
@@ -29,27 +29,27 @@ public:
 	void clean();
 
 protected:
-	GameController* mGameController;
+	GameController* mGameController = nullptr;
 
-	OgreBites::SdkTrayManager* mTrayManager;
-	OgreBites::Label* mNextScreenLabel;
+	OgreBites::SdkTrayManager* mTrayManager = nullptr;
+	OgreBites::Label* mNextScreenLabel = nullptr;
 
 	//UI elements
 	//TODO
-	const ScreenSettings* mCurrentScreen;
-	const StationScreenSettings* mStationScreenSettings;
-	const StationSettings* mStationSettings;
+	const ScreenSettings* mCurrentScreen = nullptr;
+	const StationScreenSettings* mStationScreenSettings = nullptr;
+	const StationSettings* mStationSettings = nullptr;
 
 	//View
-	StationView* mStationView;
+	StationView* mStationView = nullptr;
 
 	//OIS
 	virtual bool keyPressed(const OIS::KeyEvent &arg);
-    virtual bool keyReleased(const OIS::KeyEvent &arg);
+	virtual bool keyReleased(const OIS::KeyEvent &arg);
 
-	virtual bool mouseMoved( const OIS::MouseEvent &arg );
-	virtual bool mousePressed( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
-	virtual bool mouseReleased( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
+	virtual bool mouseMoved(const OIS::MouseEvent &arg);
+	virtual bool mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
+	virtual bool mouseReleased(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
 
 	//virtual ~SdkTrayListener() {}
 	virtual void buttonHit(OgreBites::Button* button) {}

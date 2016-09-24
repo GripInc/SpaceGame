@@ -23,10 +23,10 @@ public:
 		return success;
 	}
 
-	float mConsumption;
-	float mPowerMultiplier;
-	float mMaxSpeedMultiplier;
-	Types::EngineType mType;
+	float mConsumption = 0.f;
+	float mPowerMultiplier = 0.f;
+	float mMaxSpeedMultiplier = 0.f;
+	Types::EngineType mType = Types::ET_CHIMICAL;
 };
 
 class PostCombustionsSettings

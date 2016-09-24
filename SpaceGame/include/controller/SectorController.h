@@ -28,8 +28,6 @@ public:
 	void createSector(const std::string& _sectorName, Ogre::SceneManager* _sceneManager, float _sectorUpdateRate, SectorTick _startingSectorTick);
 	void instantiatePlayerShip(Ship& _playerShip, const std::string& _shipId, const Ogre::Vector3& _position, const Ogre::Quaternion& _orientation, UniqueId _uniqueId, RakNet::RakNetGUID _rakNetGUID) { mCurrentSector->instantiatePlayerShip(_playerShip, _shipId, _orientation, _position, _uniqueId, _rakNetGUID); }
 
-	void addShotObject(const ShotSettings& _shotSettings);
-
 	//Getters
 	Sector* getCurrentSector() { return mCurrentSector; }
 	const Ship* getPlayerShip() const { return mCurrentSector->getPlayerShip(); }
@@ -45,13 +43,13 @@ public:
 	std::string mLastShotTarget;
 	std::string mLastCollidedPart0;
 	std::string mLastCollidedPart1;
-	float mLastCollisionSpeed;
+	float mLastCollisionSpeed = 0.f;
 	void switchDisplayDebug() { mCurrentSector->switchDisplayDebug(); }
 	void switchDisplay() { mCurrentSector->switchDisplay(); }
 
 protected:
-	SectorView* mSectorView;
-	Sector* mCurrentSector;
+	SectorView* mSectorView = nullptr;
+	Sector* mCurrentSector = nullptr;
 };
 
 #endif //_SECTOR_CONTROLLER_H_

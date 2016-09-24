@@ -43,7 +43,7 @@ public:
 		return success;
 	}
 
-	float mArmorSurface;
+	float mArmorSurface = 0.f;
 
 	std::vector<Types::EquipementType> mAllowedParts;
 	btAlignedObjectArray<CollisionShapeSettings> mCollisionShapes;

@@ -23,9 +23,9 @@ public:
 		return success;
 	}
 
-	int mIndex;
+	int mIndex = 0;
 	btVector3 mPosition;
-	float mRoll; //roll value of the weapon attached around the z axis
+	float mRoll = 0.f; //roll value of the weapon attached around the z axis
 };
 
 #endif //_HARD_POINT_SETTINGS_H_

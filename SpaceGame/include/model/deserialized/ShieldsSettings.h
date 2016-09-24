@@ -18,8 +18,8 @@ public:
 		return success;
 	}
 
-	unsigned int mRegeneration;
-	unsigned int mCapacity;
+	unsigned int mRegeneration = 0U;
+	unsigned int mCapacity = 0U;
 };
 
 class ShieldsSettings

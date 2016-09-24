@@ -12,7 +12,7 @@ public:
 	//static const float MAX_ACCEPTABLE_VECTOR_3D_DELTA;
 	//static const float MAX_ACCEPTABLE_QUATERNION_DELTA;
 
-	DynamicObject() : mUniqueId(0) {}
+	DynamicObject() {}
 	DynamicObject(const DynamicObjectSettings* _dynamicObjectSettings, Ogre::SceneManager* _sceneManager, btDiscreteDynamicsWorld* _dynamicWorld, UniqueId _uniqueId) : StaticObject(_dynamicObjectSettings, _sceneManager, _dynamicWorld), mUniqueId(_uniqueId) {}
 
 	virtual void destroy();
@@ -37,7 +37,7 @@ public:
 protected:
 	virtual void instantiateCollisionObject();
 
-	UniqueId mUniqueId;
+	UniqueId mUniqueId = 0;
 
 	//Return true if comparison was acceptable
 	bool compareStates(const DynamicObjectState& _state1, const DynamicObjectState& _state2) const;

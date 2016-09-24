@@ -19,7 +19,7 @@ public:
     virtual void setWorldTransform(const btTransform& _centerOfMassWorldTransform);
  
 protected:
-    Ogre::SceneNode* mSceneNode;
+    Ogre::SceneNode* mSceneNode = nullptr;
 };
 
 #endif //_MY_MOTION_STATE_H

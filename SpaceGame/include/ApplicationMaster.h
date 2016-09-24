@@ -7,8 +7,6 @@
 
 #define GAME_SETTINGS_FILE_PATH "../SpaceGameRessources/"
 
-class NetworkLayer;
-
 class ApplicationMaster : public Ogre::FrameListener
 {
 public:
@@ -23,12 +21,12 @@ protected:
     void setupResources(void);
     void loadResources(void);
 
-    Ogre::Root *mRoot;
-    Ogre::RenderWindow* mWindow;
+    Ogre::Root* mRoot = nullptr;
+    Ogre::RenderWindow* mWindow = nullptr;
     Ogre::String mResourcesCfg;
     Ogre::String mPluginsCfg;
 
-    bool mShutDown;
+	bool mShutDown = false;
 
     NetworkLayer mNetworkLayer;
 	

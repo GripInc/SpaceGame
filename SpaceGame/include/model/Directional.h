@@ -8,7 +8,6 @@ class DirectionalSettings;
 class Directional
 {
 public:
-	Directional() : mName(""), mSpace(0), mHitPoints(0), mMass(0), mTurnRateMultiplier(0.f), mInertiaMultiplier(0.f) {}
 	void init(const DirectionalSettings& _settings);
 
 	float getInertiaMultiplier() const { return mInertiaMultiplier; }
@@ -16,11 +15,11 @@ public:
 
 protected:
 	std::string mName;
-	unsigned int mSpace;
-	unsigned int mHitPoints;
-	unsigned int mMass;
-	float mTurnRateMultiplier;
-	float mInertiaMultiplier;
+	unsigned int mSpace = 0U;
+	unsigned int mHitPoints = 0U;
+	unsigned int mMass = 0U;
+	float mTurnRateMultiplier = 0.f;
+	float mInertiaMultiplier = 0.f;
 };
 
 #endif //_DIRECTIONAL_H_

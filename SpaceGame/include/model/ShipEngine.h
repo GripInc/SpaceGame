@@ -8,8 +8,6 @@ class EngineSettings;
 class Engine
 {
 public:
-	ShipEngine() : mName(""), mReactivity(0.f), mPower(0.f), mMaxSpeed(0.f), mThrustSensitivity(0.f), mThrustMaxValue(0.f), mWantedThrust(0.f), mRealThrust(0.f) {}
-
 	void init(const EngineSettings& _engineSettings);
 
 	///Getters
@@ -20,20 +18,20 @@ public:
 	float getThrustSensitivity() const { return mThrustSensitivity; }
 	float getThrustMaxValue() const { return mThrustMaxValue; }
 
-	float mWantedThrust;
-	float mRealThrust;
+	float mWantedThrust = 0.f;
+	float mRealThrust = 0.f;
 
 protected:
 	std::string mName;
 	///The rate real thrust approach wanted thrust
-	float mReactivity;
+	float mReactivity = 0.f;
 	///
-	float mPower;
+	float mPower = 0.f;
 	///Max gaz ejection speed
-	float mMaxSpeed;
+	float mMaxSpeed = 0.f;
 	///The rate the player can add power in engine
-	float mThrustSensitivity;
-	float mThrustMaxValue;
+	float mThrustSensitivity = 0.f;
+	float mThrustMaxValue = 0.f;
 };
 
 #endif //_SHIP_ENGINE_H_

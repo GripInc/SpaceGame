@@ -53,11 +53,11 @@ public:
 
 	std::string mShotType;
 	std::string mMesh;
-	float mFireRate; //in sec
+	float mFireRate = 0.f; //in sec
 	btVector3 mNoslePosition;
 	HardPointSettings mHardPoint;
-	unsigned int mHitPoints;
-	float mConsumption;
+	unsigned int mHitPoints = 0U;
+	float mConsumption = 0.f;
 
 	btAlignedObjectArray<CollisionShapeSettings> mCollisionShapes;
 };

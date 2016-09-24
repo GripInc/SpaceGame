@@ -36,12 +36,12 @@ public:
 
 	std::string mStationModel;
 	std::string mScreenModel;
-	bool mHasEquipementDealer;
-	bool mHasCommodityDealer;
-	bool mHasBar;
-	bool mHasGuildsOffice;
-	bool mHasMissionsComputer;
-	bool mHasTrainer;
+	bool mHasEquipementDealer = false;
+	bool mHasCommodityDealer = false;
+	bool mHasBar = false;
+	bool mHasGuildsOffice = false;
+	bool mHasMissionsComputer = false;
+	bool mHasTrainer = false;
 	btAlignedObjectArray<SectorObjectSettings> mLaunchPoints;
 };
 

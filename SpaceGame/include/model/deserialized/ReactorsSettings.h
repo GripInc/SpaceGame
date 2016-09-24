@@ -21,8 +21,8 @@ public:
 		return success;
 	}
 
-	float mGeneration;
-	Types::ReactorType mType;
+	float mGeneration = 0.f;
+	Types::ReactorType mType = Types::RT_CHIMICAL;
 };
 
 class ReactorsSettings

@@ -44,10 +44,10 @@ public:
 	//RakNet::Time getClockDifferentialToServer() const;
 
 protected:
-	RakNet::RakPeerInterface *mPeer;
+	RakNet::RakPeerInterface* mPeer = nullptr;
 
-	INetworkService* mNetworkService;
-	IConnectionReadyListener* mConnectionReadyListener;
+	INetworkService* mNetworkService = nullptr;
+	IConnectionReadyListener* mConnectionReadyListener = nullptr;
 
 	RakNet::SocketDescriptor mSocketDescriptor;
 
@@ -58,7 +58,7 @@ protected:
 	void setIsConnected(bool _value);
 
 private:
-	bool mIsConnected; //Use setter only to change value
+	bool mIsConnected = false; //Use setter only to change value
 };
 
 #endif //_NETWORK_LAYER_H_

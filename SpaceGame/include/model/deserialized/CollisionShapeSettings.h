@@ -47,7 +47,7 @@ public:
 	btVector3 mInitialPosition;
 	btVector3 mInitialScale;
 	btQuaternion mInitialOrientation;
-	bool mNeedConvexHullShape;
+	bool mNeedConvexHullShape = false;
 };
 
 #endif //_COLLISION_SHAPE_SETTINGS_H_

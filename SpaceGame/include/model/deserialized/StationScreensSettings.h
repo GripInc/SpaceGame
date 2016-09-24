@@ -25,10 +25,10 @@ class ClickZoneSettings : public NamedSettings
 		return success;
 	}
 
-	int mX;
-	int mY;
-	int mWidth;
-	int mHeight;
+	int mX = 0;
+	int mY = 0;
+	int mWidth = 0;
+	int mHeight = 0;
 	std::string mTarget;
 };
 

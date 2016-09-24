@@ -11,17 +11,12 @@ class ObjectPartSettings;
 class ObjectPart
 {
 public:
-	ObjectPart() 
-		: mName(""),
-		mHitPoints(0)
-	{}
-
 	void init(const ObjectPartSettings& _objectPartSettings);
 	btCollisionShape* createCollisionShape(const CollisionShapeSettings& _collisionShapeSettings);
 
 	const std::string& getName() const { return mName; }
 
-	int mHitPoints;
+	int mHitPoints = 0;
 
 protected:
 	std::string mName;

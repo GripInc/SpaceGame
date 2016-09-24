@@ -100,11 +100,11 @@ public:
 	}
 
 	//Systems relative
-	float mCurrentRollForce;
-	float mCurrentYawForce;
-	float mCurrentPitchForce;
+	float mCurrentRollForce = 0.f;
+	float mCurrentYawForce = 0.f;
+	float mCurrentPitchForce = 0.f;
 
-	float mEnginePotentialForce;
+	float mEnginePotentialForce = 0.f;
 
 	//Hardpoints (index, elapsedTime)
 	std::vector<std::pair<int, float> > mHarpointsState;

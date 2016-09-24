@@ -34,9 +34,6 @@
     <Filter Include="Header Files\view">
       <UniqueIdentifier>{dc4795ab-8ea5-443a-952e-c149c6171bbb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\model\deserialized">
-      <UniqueIdentifier>{b999cad7-cd4f-462e-b106-078265902513}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\controller">
       <UniqueIdentifier>{34efb565-a9dc-4a03-8bb7-5a386719138f}</UniqueIdentifier>
     </Filter>
@@ -69,6 +66,9 @@
     </Filter>
     <Filter Include="Source Files\utils\json">
       <UniqueIdentifier>{debb1edf-6556-4a0a-b3e0-c8202d2ed69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\model\settings">
+      <UniqueIdentifier>{b999cad7-cd4f-462e-b106-078265902513}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -151,70 +151,70 @@
       <Filter>Header Files\model</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\AccumulatorsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\CollisionShapeSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\DirectionalsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\DynamicObjectSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\EnginesSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\HardPointSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\NamedSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\ObjectPartSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\PostCombustionsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\ReactorsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\SectorObjectSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\SectorsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\ShieldsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\ShipsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\ShotsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\StaticObjectSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\StationObjectSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\StationScreensSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\StationsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\SystemSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\Types.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\model\deserialized\WeaponsSettings.h">
-      <Filter>Header Files\model\deserialized</Filter>
+      <Filter>Header Files\model\settings</Filter>
     </ClInclude>
     <ClInclude Include="include\network\IConnectionReadyListener.h">
       <Filter>Header Files\network</Filter>

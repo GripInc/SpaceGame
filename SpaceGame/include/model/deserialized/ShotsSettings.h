@@ -16,8 +16,8 @@ public:
 		return true;
 	}
 
-	float mLifeTime;
-	float mSpeed;
+	float mLifeTime = 0.f;
+	float mSpeed = 0.f;
 };
 
 class ShotsSettings

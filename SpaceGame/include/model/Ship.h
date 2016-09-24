@@ -17,13 +17,6 @@ class WeaponSettings;
 class Ship : public DynamicObject
 {
 public:
-	Ship()
-		: mCurrentRollForce(0),
-		mCurrentYawForce(0),
-		mCurrentPitchForce(0),
-		mEnginePotentialForce(0.f)
-	{}
-
 	void initShip(const ShipSettings* _shipSettings);
 
 	virtual void instantiateObject(Ogre::SceneManager* _sceneManager, btDiscreteDynamicsWorld* _dynamicWorld, UniqueId _uniqueId);
@@ -48,11 +41,11 @@ public:
 	Engine& getEngine() { return mEngine; }
 	Directional& getDirectional() { return mDirectional; }
 	
-	float mCurrentRollForce;
-	float mCurrentYawForce;
-	float mCurrentPitchForce;
+	float mCurrentRollForce = 0.f;
+	float mCurrentYawForce = 0.f;
+	float mCurrentPitchForce = 0.f;
 
-	float mEnginePotentialForce;
+	float mEnginePotentialForce = 0.f;
 
 	void updateForces();
 
@@ -65,8 +58,8 @@ public:
 	//DEBUG
 	const btVector3& getLinearVelocity() const;
 	btRigidBody* getRigidBody() { return mRigidBody; }
-	float mDebugValue;
-	float mEngineRealForce;
+	float mDebugValue = 0.f;
+	float mEngineRealForce = 0.f;
 
 	//States management
 	virtual void saveState(SectorTick _tick);
@@ -81,10 +74,10 @@ public:
 
 protected:
 	///Ship properties from XML
-	float mMaxYawRate;
-	float mMaxPitchRate;
-	float mMaxRollRate;
-	unsigned int mCargoSpace;
+	float mMaxYawRate = 0.f;
+	float mMaxPitchRate = 0.f;
+	float mMaxRollRate = 0.f;
+	unsigned int mCargoSpace = 0U;
 
 	virtual void instantiateObjectParts();
 

@@ -12,11 +12,11 @@ public:
 	static bool sManualObjectIsReady;
 
 	PlanetObject(const SectorObjectSettings* _sectorObjectSettings, Ogre::SceneManager* _sceneManager)
-		: SectorObject(_sectorObjectSettings, _sceneManager), mManualObjectIsReady(false)
+		: SectorObject(_sectorObjectSettings, _sceneManager)
 	{}
 
 protected:
-	bool mManualObjectIsReady;
+	bool mManualObjectIsReady = false;
 
 	//Create entity
 	virtual Ogre::Entity* createEntity(const std::string& _name, const std::string& _mesh, const Ogre::Vector3& _scale, Ogre::SceneManager* _sceneManager);

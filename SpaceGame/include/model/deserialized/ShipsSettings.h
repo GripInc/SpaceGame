@@ -37,13 +37,13 @@ public:
 		return success;
 	}
 
-	float mMaxYawRate;
-	float mMaxPitchRate;
-	float mMaxRollRate;
-	float mHeadPosX;
-	float mHeadPosY;
-	float mHeadPosZ;
-	unsigned int mCargoSpace;
+	float mMaxYawRate = 0.f;
+	float mMaxPitchRate = 0.f;
+	float mMaxRollRate = 0.f;
+	float mHeadPosX = 0.f;
+	float mHeadPosY = 0.f;
+	float mHeadPosZ = 0.f;
+	unsigned int mCargoSpace = 0U;
 
 	btAlignedObjectArray<HardPointSettings> mHardPoints;
 };

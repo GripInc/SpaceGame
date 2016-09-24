@@ -27,14 +27,14 @@ public:
 		return success;
 	}
 
-	float mReactivity;
-	float mPower;
-	float mMaxSpeed;
-	float mThrustSensitivity;
-	float mThrustMaxValue;
-	unsigned int mSpace;
-	unsigned int mHitPoints;
-	float mConsumption;
+	float mReactivity = 0.f;
+	float mPower = 0.f;
+	float mMaxSpeed = 0.f;
+	float mThrustSensitivity = 0.f;
+	float mThrustMaxValue = 0.f;
+	unsigned int mSpace = 0U;
+	unsigned int mHitPoints = 0U;
+	float mConsumption = 0.f;
 	Types::EngineType mType;
 };
 

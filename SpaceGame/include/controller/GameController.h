@@ -39,18 +39,7 @@ namespace Ogre
 class GameController : public Ogre::FrameListener, public OIS::KeyListener, public IConnectionReadyListener
 {
 public:
-	GameController()
-		: mSectorController(NULL),
-		mStationController(NULL),
-		mSwitchToSpaceData(NULL),
-		mSwitchToStationData(NULL),
-		mGameUpdateAccumulator(0.f)
-	{}
-
-	~GameController()
-	{
-	}
-
+	
 	void init(const std::string& _sectorFilePath, Ogre::Root* _root, Ogre::RenderWindow* _renderWindow, Ogre::SceneManager* _sceneManager, NetworkLayer& _networkLayer);
 	void startGame(const RakNet::RakString& _data);
 
@@ -66,7 +55,7 @@ public:
 
 protected:
 	static const float GAME_UPDATE_RATE;
-	float mGameUpdateAccumulator;
+	float mGameUpdateAccumulator = 0.f;
 	Ogre::Timer mLoopTimer;
 
 	class SwitchToSpaceData
@@ -74,16 +63,15 @@ protected:
 	public:
 		SwitchToSpaceData() 
 			: mPosition(Ogre::Vector3(0.f,0.f,0.f)),
-			mOrientation(Ogre::Quaternion::IDENTITY),
-			mSectorTick(0)
+			mOrientation(Ogre::Quaternion::IDENTITY)
 		{}
 
 		Ogre::Vector3 mPosition;
 		Ogre::Quaternion mOrientation;
 		std::string mSectorName;
-		UniqueId mUniqueId;
+		UniqueId mUniqueId = 0;
 		RakNet::RakNetGUID mRakNetGUID;
-		SectorTick mSectorTick;
+		SectorTick mSectorTick = 0;
 	};
 
 	class SwitchToStationData
@@ -92,39 +80,37 @@ protected:
 		std::string mStationName;
 	};
 
-	SwitchToSpaceData* mSwitchToSpaceData;
-	SwitchToStationData* mSwitchToStationData;
+	SwitchToSpaceData* mSwitchToSpaceData = nullptr;
+	SwitchToStationData* mSwitchToStationData = nullptr;
 
 	//
 	void switchToStationMode(const std::string& _stationName);
 	void switchToInSpaceMode(const Ogre::Vector3& _position, const Ogre::Quaternion& _orientation, const std::string& _sectorName, UniqueId _uniqueId, RakNet::RakNetGUID _rakNetGUID, SectorTick _sectorTick);
 
-	Ogre::RenderWindow* mRenderWindow;
-	Ogre::Root* mRoot;
+	Ogre::RenderWindow* mRenderWindow = nullptr;
+	Ogre::Root* mRoot = nullptr;
 
-	Ogre::SceneManager* mSceneManager;
+	Ogre::SceneManager* mSceneManager = nullptr;
 	
-	SectorController* mSectorController;
-	InputController* mInputController;
-	UIController* mUIController;
-	StationController* mStationController;
+	SectorController* mSectorController = nullptr;
+	InputController* mInputController = nullptr;
+	UIController* mUIController = nullptr;
+	StationController* mStationController = nullptr;
 	ShipInputHandler mShipInputHandler;
 
 	PlayerData mPlayerData;
-
-	const Sector* getSector(const std::string& _sectorName);
 
 	// Ogre::FrameListener
     bool frameRenderingQueued(const Ogre::FrameEvent& evt);
 
 	//DEBUG
-	float mDebugPanelLastRefresh;
+	float mDebugPanelLastRefresh = 0.f;
 	static const float sDebugPanelRefreshRate;
 	
 	virtual bool keyPressed( const OIS::KeyEvent &arg );
     virtual bool keyReleased( const OIS::KeyEvent &arg );
 
-	long mLaggyValue;
+	long mLaggyValue = 0;
 };
 
 #endif //_GAME_CONTROLLER_H_

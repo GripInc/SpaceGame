@@ -13,8 +13,7 @@ public:
 	HardPoint(int _index, const btVector3& _position, float _roll)
 		: mIndex(_index),
 		mPosition(_position),
-		mRoll(_roll),
-		mElapsedTime(0.f)
+		mRoll(_roll)
 	{}
 
 	int getIndex() const { return mIndex; }
@@ -29,12 +28,12 @@ public:
 	const ShotSettings& getShotSettings() const { return mShotSettings; }
 
 	//mElapsedTime since last use
-	float mElapsedTime;
+	float mElapsedTime = 0.f;
 
 protected:
-	int mIndex;
+	int mIndex = 0;
 	btVector3 mPosition;
-	float mRoll;
+	float mRoll = 0.f;
 
 	WeaponSettings mWeaponSettings;
 	ShotSettings mShotSettings;

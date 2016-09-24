@@ -29,23 +29,23 @@ protected:
 	bool mInputChanged;
 
 	// OIS::KeyListener
-    virtual bool keyPressed( const OIS::KeyEvent &arg );
-    virtual bool keyReleased( const OIS::KeyEvent &arg );
-    // OIS::MouseListener
-    virtual bool mouseMoved( const OIS::MouseEvent &arg );
-    virtual bool mousePressed( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
-    virtual bool mouseReleased( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
+	virtual bool keyPressed(const OIS::KeyEvent &arg);
+	virtual bool keyReleased(const OIS::KeyEvent &arg);
+	// OIS::MouseListener
+	virtual bool mouseMoved(const OIS::MouseEvent &arg);
+	virtual bool mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
+	virtual bool mouseReleased(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
 	// OIS::JoystickListener
-	bool povMoved( const OIS::JoyStickEvent &e, int pov );
-    bool axisMoved( const OIS::JoyStickEvent &e, int axis );
-    bool sliderMoved( const OIS::JoyStickEvent &e, int sliderID );
-    bool buttonPressed( const OIS::JoyStickEvent &e, int button );
-    bool buttonReleased( const OIS::JoyStickEvent &e, int button );
+	bool povMoved(const OIS::JoyStickEvent &e, int pov);
+	bool axisMoved(const OIS::JoyStickEvent &e, int axis);
+	bool sliderMoved(const OIS::JoyStickEvent &e, int sliderID);
+	bool buttonPressed(const OIS::JoyStickEvent &e, int button);
+	bool buttonReleased(const OIS::JoyStickEvent &e, int button);
 
 	//OIS Input devices
-    OIS::InputManager* mInputManager;
-    OIS::Mouse*    mMouse;
-    OIS::Keyboard* mKeyboard;
+	OIS::InputManager* mInputManager = nullptr;
+	OIS::Mouse*    mMouse = nullptr;
+	OIS::Keyboard* mKeyboard = nullptr;
 };
 
 #endif //_SHIP_INPUT_HANDLER_H_

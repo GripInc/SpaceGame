@@ -4,42 +4,24 @@
 class InputState
 {
 public:
-	InputState ()
-		: mUpKeyPressed(false),
-		mDownKeyPressed(false),
-		mLeftKeyPressed(false),
-		mRightKeyPressed(false),
-		mQKeyPressed(false),
-		mAKeyPressed(false),
-		mWKeyPressed(false),
-		mXKeyPressed(false),
-		mSKeyPressed(false),
-		mZKeyPressed(false),
-		mMouseXAbs(0),
-		mMouseYAbs(0),
-		mJoystickXAbs(0),
-		mJoystickYAbs(0),
-		mFirePressed(false)
-	{}
+	bool mAKeyPressed = false;
+	bool mQKeyPressed = false;
+	bool mWKeyPressed = false;
+	bool mXKeyPressed = false;
+	bool mSKeyPressed = false;
+	bool mZKeyPressed = false;
 
-	bool mAKeyPressed;
-	bool mQKeyPressed;
-	bool mWKeyPressed;
-	bool mXKeyPressed;
-	bool mSKeyPressed;
-	bool mZKeyPressed;
+	float mJoystickXAbs = 0.f;
+	float mJoystickYAbs = 0.f;
+	float mMouseXAbs = 0.f;
+	float mMouseYAbs = 0.f;
 
-	float mJoystickXAbs;
-	float mJoystickYAbs;
-	float mMouseXAbs;
-	float mMouseYAbs;
+	bool mUpKeyPressed = false;
+	bool mDownKeyPressed = false;
+	bool mLeftKeyPressed = false;
+	bool mRightKeyPressed = false;
 
-	bool mUpKeyPressed;
-	bool mDownKeyPressed;
-	bool mLeftKeyPressed;
-	bool mRightKeyPressed;
-
-	bool mFirePressed;
+	bool mFirePressed = false;
 };
 
 #endif //_INPUT_STATE_H_

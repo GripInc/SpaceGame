@@ -40,8 +40,8 @@ protected:
 	static NetworkService* mInstance;
 	NetworkService() {}
 
-	NetworkLayer* mNetworkLayer;
-	GameController* mGameController;
+	NetworkLayer* mNetworkLayer = nullptr;
+	GameController* mGameController = nullptr;
 
 	void receivedLaunchData(RakNet::BitStream& _data) const;
 };

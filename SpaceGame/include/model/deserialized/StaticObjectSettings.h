@@ -23,7 +23,7 @@ public:
 				objectPartNode = objectPartNode->NextSiblingElement("ObjectPart");
 			}
 			else
-				success &= false;
+				success = false;
 		}
 
 		return success;
